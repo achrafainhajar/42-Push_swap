@@ -6,7 +6,7 @@
 /*   By: aainhaja <aainhaja@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/09 16:40:15 by aainhaja          #+#    #+#             */
-/*   Updated: 2022/03/06 23:51:14 by aainhaja         ###   ########.fr       */
+/*   Updated: 2022/03/08 22:19:44 by aainhaja         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -116,7 +116,7 @@ void	sort5(t_list **stacka, t_list **stackb)
 	int	*b;
 	int	j;
 
-	b = malloc(sizeof(int) * 4);
+	b = malloc(sizeof(int) * 5);
 	j = findsmall(*stacka, 4, b);
 	i = 0;
 	if (j > 2)

@@ -6,7 +6,7 @@
 /*   By: aainhaja <aainhaja@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/03 16:59:35 by aainhaja          #+#    #+#             */
-/*   Updated: 2022/03/06 23:16:22 by aainhaja         ###   ########.fr       */
+/*   Updated: 2022/03/09 22:45:58 by aainhaja         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,9 @@ typedef struct s_list
 	int				content;
 	struct s_list	*next;
 }	t_list;
-int		checknum(const char *str);
+int		checknum(char **str);
 int		check(int argc, char **argv);
-int		checkrep(int argc, char **argv);
+int		checkrep(t_list **stacka);
 void	cases(int *b, t_list	**stacka);
 void	sa(t_list	**stacka, int i);
 void	pa(t_list **stacka, t_list **stackb, int i);
@@ -64,4 +64,9 @@ void	ft_lstclear(t_list	**lst);
 int		ft_atoi(const char	*str);
 void	if_checker(t_list **stacka, t_list **stackb, char *str);
 void	norm_bonus(t_list **stacka, t_list **stackb, char *str);
+int		get_size2(char **argv, int argc);
+char	**ft_split(char const *s, char c);
+char	**ft_splitcpy(const char *s, char c, char **str, int alloc);
+char	**ft_charcount(const char *s, char c, char **str, int alloc);
+void	*norm22(int argc, char **argv);
 #endif

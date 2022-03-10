@@ -6,7 +6,7 @@
 /*   By: aainhaja <aainhaja@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/01 17:35:16 by aainhaja          #+#    #+#             */
-/*   Updated: 2022/03/07 00:00:00 by aainhaja         ###   ########.fr       */
+/*   Updated: 2022/03/10 01:12:34 by aainhaja         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 
 int	main(int argc, char	**argv)
 {
-	t_list	*head;
 	t_list	*stacka;
 	t_list	*stackb;
 
@@ -23,23 +22,18 @@ int	main(int argc, char	**argv)
 		ft_putstr("Error\n", 1);
 		return (0);
 	}
-	while (1 < argc)
-	{
-		head = malloc(sizeof(t_list));
-		head->next = NULL;
-		head->content = atoi(argv[argc - 1]);
-		head->next = stacka;
-		stacka = head;
-		argc--;
-	}
+	stacka = norm22(argc, argv);
 	if (check_sort(stacka) != 0)
 		return (0);
-	ifcases(&stacka, &stackb, get_size(stacka));
-	// while (stacka)
+	if (checkrep(&stacka) != 0)
+		exit(0);
+	// while(stacka)
 	// {
-	// 	printf("|%d|\n", stacka->content);
+	// 	printf("%d\n",stacka->content);
 	// 	stacka = stacka->next;
 	// }
+	// exit(0);
+	ifcases(&stacka, &stackb, get_size(stacka));
 	return (0);
 }
 

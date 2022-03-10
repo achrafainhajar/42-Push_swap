@@ -6,7 +6,7 @@
 /*   By: aainhaja <aainhaja@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/23 18:39:14 by aainhaja          #+#    #+#             */
-/*   Updated: 2022/03/06 23:09:34 by aainhaja         ###   ########.fr       */
+/*   Updated: 2022/03/10 00:50:33 by aainhaja         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,8 @@ void	sort_500(t_list **stacka, t_list **stackb, float l)
 
 	i = 0;
 	head = *stacka;
-	b = get_chunks(*stacka, l, 8);
-	while (i < 7)
+	b = get_chunks(*stacka, l, 12);
+	while (i < 11)
 	{
 		head = *stacka;
 		sort_norm(stacka, stackb, b[i], head);

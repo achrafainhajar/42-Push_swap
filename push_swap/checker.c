@@ -6,7 +6,7 @@
 /*   By: aainhaja <aainhaja@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/05 15:48:39 by aainhaja          #+#    #+#             */
-/*   Updated: 2022/03/06 23:30:07 by aainhaja         ###   ########.fr       */
+/*   Updated: 2022/03/10 01:17:23 by aainhaja         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 
 int	main(int argc, char **argv)
 {
-	t_list	*head;
 	t_list	*stacka;
 	t_list	*stackb;
 	char	*str;
@@ -25,15 +24,9 @@ int	main(int argc, char **argv)
 		ft_putstr("Error\n", 1);
 		return (0);
 	}
-	while (1 < argc)
-	{
-		head = malloc(sizeof(t_list));
-		head->next = NULL;
-		head->content = atoi(argv[argc - 1]);
-		head->next = stacka;
-		stacka = head;
-		argc--;
-	}
+	stacka = norm22(argc, argv);
+	if (checkrep(&stacka) != 0)
+		exit(0);
 	str = get_next_line(0);
 	norm_bonus(&stacka, &stackb, str);
 	return (0);
@@ -77,7 +70,7 @@ void	norm_bonus(t_list **stacka, t_list **stackb, char *str)
 		str = get_next_line(0);
 	}
 	if (check_sort(*stacka) == 1)
-		ft_putstr("OK", 1);
+		ft_putstr("OK\n", 1);
 	else
-		ft_putstr("KO", 1);
+		ft_putstr("KO\n", 1);
 }

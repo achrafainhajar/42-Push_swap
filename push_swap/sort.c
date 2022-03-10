@@ -6,7 +6,7 @@
 /*   By: aainhaja <aainhaja@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/15 21:31:58 by aainhaja          #+#    #+#             */
-/*   Updated: 2022/03/04 20:08:28 by aainhaja         ###   ########.fr       */
+/*   Updated: 2022/03/10 00:45:31 by aainhaja         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@ int	*get_chunks(t_list *stacka, float i, int s)
 	t_list	*head;
 	t_list	*top;
 
+	top = NULL;
 	head1 = stacka;
 	while (head1)
 	{
