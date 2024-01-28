@@ -12,10 +12,12 @@ all : $(NAME)
 $(NAME):
 	@gcc -Wextra -Werror -Wall $(SRC) -o push_swap
 
-bonus:
-	@gcc -Wall -Wextra -Werror $(SRC_BONUS) -o $(NAME_BONUS) 
+bonus: $(NAME_BONUS)
+
+$(NAME_BONUS):
+	@gcc -Wall -Wextra -Werror $(SRC_BONUS) -o $(NAME_BONUS)
 clean:
-	@rm -f $(OBJECT) $(OBJECT_BONUS)
+	@rm -rf $(OBJECT) $(OBJECT_BONUS)
 fclean: clean
-	@rm -f $(NAME) $(NAME_BONUS)
+	@rm -rf $(NAME) $(NAME_BONUS)
 re: fclean all bonus

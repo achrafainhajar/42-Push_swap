@@ -23,9 +23,9 @@ int	main(int argc, char	**argv)
 		return (0);
 	}
 	stacka = norm22(argc, argv);
-	if (check_sort(stacka) != 0)
+	if (argc == 1)
 		return (0);
-	if (checkrep(&stacka) != 0)
+	if (checkrep(&stacka) != 0 || check_sort(stacka) != 0)
 		exit(0);
 	ifcases(&stacka, &stackb, get_size(stacka));
 	return (0);

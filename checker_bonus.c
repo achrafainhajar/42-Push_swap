@@ -62,9 +62,17 @@ void	if_checker(t_list **stacka, t_list **stackb, char *str)
 		rrb(stackb, 0);
 	else if (ft_strcmp(str, "rrr\n") == 0)
 		rrr(stacka, stackb, 0);
-	else if (ft_strcmp(str, "sa\n") == 0)
+	else
+		norm3(stacka, stackb, str);
+}
+
+void	norm3(t_list **stacka, t_list **stackb, char *str)
+{
+	if (ft_strcmp(str, "sa\n") == 0)
 		sa(stacka, 0);
 	else if (ft_strcmp(str, "sb\n") == 0)
+		sb(stackb, 0);
+	else if (ft_strcmp(str, "ss\n") == 0)
 		sb(stackb, 0);
 	else
 	{

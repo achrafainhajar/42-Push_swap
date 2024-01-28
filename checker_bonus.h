@@ -18,4 +18,7 @@
 # include	<unistd.h>
 # include "push_swap.h"
 
+void	norm3(t_list **stacka, t_list **stackb, char *str);
+void	if_checker(t_list **stacka, t_list **stackb, char *str);
+void	norm_bonus(t_list **stacka, t_list **stackb, char *str);
 #endif

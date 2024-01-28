@@ -6,7 +6,7 @@
 /*   By: aainhaja <aainhaja@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/03 16:59:35 by aainhaja          #+#    #+#             */
-/*   Updated: 2022/03/09 22:45:58 by aainhaja         ###   ########.fr       */
+/*   Updated: 2022/03/10 23:41:42 by aainhaja         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,10 +24,12 @@ typedef struct s_list
 	struct s_list	*next;
 }	t_list;
 int		checknum(char **str);
+void	ft_free1(char **str);
 int		check(int argc, char **argv);
 int		checkrep(t_list **stacka);
 void	cases(int *b, t_list	**stacka);
 void	sa(t_list	**stacka, int i);
+void	sb(t_list	**stackb, int i);
 void	pa(t_list **stacka, t_list **stackb, int i);
 void	pb(t_list **stacka, t_list **stackb, int i);
 void	ra(t_list **stacka, int i);
@@ -55,18 +57,16 @@ int		check_sort(t_list *head);
 void	sort_500(t_list **stacka, t_list **stackb, float l);
 int		get_num(t_list *head, int b);
 void	sort_norm(t_list **stacka, t_list	**stackb, int b, t_list	*head);
-void	sort_norm(t_list **stacka, t_list	**stackb, int b, t_list	*head);
 int		ft_abs(float num);
 void	ifcases(t_list **stacka, t_list **stackb, float size);
 int		get_norm(t_list *head, int b, int s);
 void	sort_anorm(t_list **stacka, t_list **stackb, int j);
 void	ft_lstclear(t_list	**lst);
 int		ft_atoi(const char	*str);
-void	if_checker(t_list **stacka, t_list **stackb, char *str);
-void	norm_bonus(t_list **stacka, t_list **stackb, char *str);
 int		get_size2(char **argv, int argc);
 char	**ft_split(char const *s, char c);
 char	**ft_splitcpy(const char *s, char c, char **str, int alloc);
 char	**ft_charcount(const char *s, char c, char **str, int alloc);
 void	*norm22(int argc, char **argv);
+void	ss(t_list **stackb, t_list **stacka, int i);
 #endif

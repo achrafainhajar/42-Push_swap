@@ -6,7 +6,7 @@
 /*   By: aainhaja <aainhaja@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/03 16:56:27 by aainhaja          #+#    #+#             */
-/*   Updated: 2022/03/14 19:53:03 by aainhaja         ###   ########.fr       */
+/*   Updated: 2022/03/10 22:56:11 by aainhaja         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,13 @@ void	sb(t_list **stackb, int i)
 		(*stackb)->content = a;
 	}
 	ft_putstr("sb\n", i);
+}
+
+void	ss(t_list **stackb, t_list **stacka, int i)
+{
+	sa(stacka, 0);
+	sb(stackb, 0);
+	ft_putstr("ss", i);
 }
 
 void	ft_lstclear(t_list	**lst)

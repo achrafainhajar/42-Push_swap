@@ -6,7 +6,7 @@
 /*   By: aainhaja <aainhaja@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/08 20:48:12 by aainhaja          #+#    #+#             */
-/*   Updated: 2022/03/10 01:12:06 by aainhaja         ###   ########.fr       */
+/*   Updated: 2022/03/10 20:46:37 by aainhaja         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -106,7 +106,7 @@ void	*norm22(int argc, char **argv)
 	stacka = NULL;
 	while (1 < argc)
 	{		
-		str = ft_split(argv[argc - 1], ' ');
+		str = ft_split(argv[argc - 1], 32);
 		i = 0;
 		while (str[i])
 			i++;
@@ -119,8 +119,21 @@ void	*norm22(int argc, char **argv)
 			stacka = head;
 			i--;
 		}
-		free(str);
+		ft_free1(str);
 		argc--;
 	}
 	return (stacka);
+}
+
+void	ft_free1(char **str)
+{
+	int	i;
+
+	i = 0;
+	while (str[i])
+	{
+		free(str[i]);
+		i++;
+	}
+	free(str);
 }
